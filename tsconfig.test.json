@@ -1,0 +1,37 @@
+{
+  "version": "2.6.1",
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "es6",
+    "module": "es2015",
+    "sourceMap": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "allowJs": false,
+    "noUnusedLocals": true,
+    "downlevelIteration": true,
+    "typeRoots": [
+      "node_modules/@types",
+      "@types"
+    ],
+    "types": ["node", "jquery"],
+    "jsx": "react",
+    "lib": ["dom", "es5", "es2015", "es6", "es7", "es2017.object"]
+  },
+  "exclude": [
+    "node_modules",
+    "bower_components"
+  ],
+  "awesomeTypescriptLoaderOptions": {
+    "useCache": true,
+    "useWebpackText": true,
+    "forkChecker": true,
+    "ignoreDiagnostics": [6077],
+    "exclude": [
+      "node_modules",
+      "bower_components"
+    ]
+  }
+}

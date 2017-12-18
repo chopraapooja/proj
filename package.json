@@ -4,19 +4,67 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/react": "^16.0.30",
-    "@types/react-dom": "^16.0.3",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "@types/react": "^16.0.19",
+    "@types/react-dom": "^16.0.2",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
   },
   "devDependencies": {
+    "@types/enzyme": "^3.1.6",
+    "@types/jest": "^21.1.8",
     "awesome-typescript-loader": "^3.4.1",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
+    "enzyme-to-json": "^3.3.0",
+    "jest": "^21.2.1",
+    "jest-enzyme": "^4.0.1",
+    "react-test-renderer": "^16.2.0",
     "source-map-loader": "^0.2.3",
+    "ts-jest": "^21.2.4",
     "typescript": "^2.6.2"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!hydrajs)"
+    ],
+    "unmockedModulePathPatterns": [
+      "react"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "tsconfig.test.json"
+      },
+      "ENVIRONMENT": "test",
+      "IS_CASE_ONLY_DEV": false
+    },
+    "testRegex": "(\\.(test|spec))\\.(tsx?)$",
+    "setupTestFrameworkScriptFile": "<rootDir>/tests/helpers/beforeTest.js",
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/test/helpers/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/test/helpers/__mocks__/objMock.js",
+      "\\.(po)$": "<rootDir>/test/helpers/__mocks__/objMock.js",
+      "stratajs": "<rootDir>/bower_components/stratajs/strata.js"
+    },
+    "moduleDirectories": [
+      "node_modules",
+      "<rootDir>/app"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json",
+      "ts",
+      "tsx"
+    ]
   }
 }
