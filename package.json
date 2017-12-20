@@ -22,10 +22,6 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
   },
-  "peerDependencies" :{
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
-  },
   "devDependencies": {
     "@types/enzyme": "^3.1.6",
     "@types/jest": "^21.1.8",
