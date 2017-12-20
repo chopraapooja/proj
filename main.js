@@ -1,0 +1,1 @@
+exports.Hello = require("./lib/index").Hello;

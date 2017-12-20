@@ -1,8 +1,12 @@
 module.exports = {
-    entry: "./src/index.tsx",
+    entry: "./index.ts",
+    target: "node",
     output: {
-        filename: "bundle.js",
-        path: __dirname + "/dist"
+        path: __dirname + '/lib',
+        filename: 'index.js',
+        libraryTarget: 'umd',
+        library: 'proj',
+        umdNamedDefine: true
     },
 
     // Enable sourcemaps for debugging webpack's output.
